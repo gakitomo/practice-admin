@@ -19,4 +19,13 @@ describe "ルーティング" do
       action: "new"
     )
   end
+
+  example "ホスト名が対象外ならroutableではない" do
+    expect(get: "http://foo.example.jp").not_to be_routable
+  end
+  
+  example "存在しないパスならroutableではない" do
+    config = Rails.application.config.baukis2
+    expect(get: "http://#{config[:staff][:host]}/xyz").not_to be_routable
+  end
 end
