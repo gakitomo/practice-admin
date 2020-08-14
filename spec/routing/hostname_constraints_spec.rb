@@ -10,6 +10,7 @@ describe "ルーティング" do
       action: "index"
     )
   end
+
   example "管理者ログインフォーム" do
     config = Rails.application.config.baukis2
     url = "http://#{config[:admin][:host]}/#{config[:admin][:path]}/login"
@@ -17,6 +18,16 @@ describe "ルーティング" do
       host: config[:admin][:host],
       controller: "admin/sessions",
       action: "new"
+    )
+  end
+
+  example "顧客トップページ" do
+    config = Rails.application.config.baukis2
+    url = "http://#{config[:customer][:host]}/#{config[:customer][:path]}"
+    expect(get:url).to route_to(
+      host: config[:customer][:host],
+      controller: "customer/top",
+      action: "index"
     )
   end
 
