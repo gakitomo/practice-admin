@@ -31,4 +31,10 @@ class Admin::StaffMembersController < Admin::Base
       render action: "edit"
     end
   end
+  def destroy
+    staff_member = StaffMember.find(params[:id])
+    staff_member.destroy!
+    falsh.notice = "職員アカウントを削除しました"
+    reditrect_to :admin_staff_members
+  end
 end
