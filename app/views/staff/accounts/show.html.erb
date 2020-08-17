@@ -11,7 +11,7 @@
       <th>氏名</th>
       <td>
         <%= @staff_member.family_name %>
-        <%= @staff_memner.given_name %>
+        <%= @staff_member.given_name %>
       </td>
      </tr>
      <tr>
@@ -30,7 +30,7 @@
      <tr>
       <th>入社日</th>
       <td class="date">
-        <%= @staff_member.start.date.strftime("%Y/%m/%d") %>
+        <%= @staff_member.start_date.strftime("%Y/%m/%d") %>
       </td>
     </tr>
   </table>
