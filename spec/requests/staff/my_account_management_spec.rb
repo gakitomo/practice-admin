@@ -17,10 +17,9 @@ describe "職員による自分のアカウントの管理" do
 
     example "email属性を変更する" do
       params_hash.merge!(email: "test@example.com")
-      patch staff_account_url,
-        params: {id: staff_member.id, staff_member: params_hash}
+      patch staff_account_url,params: {id: staff_member.id, staff_member: params_hash}
       staff_member.reload
-      expect (staff_member.email).to eq("test@example.com")
+      expect(staff_member.email).to eq("test@example.com")
     end
 
     example "例外ActionController::ParameterMissingが発生" do
