@@ -21,7 +21,7 @@ shared_examples "a protected staff controller" do |controller|
   end
 end
 
-shared_examples "a protected singular admin controller" do |controller|
+shared_examples "a protected singular staff controller" do |controller|
   let(:args) do
     {
       host:Rails.application.config.baukis2[:staff][:host],
@@ -29,7 +29,7 @@ shared_examples "a protected singular admin controller" do |controller|
     }
   end
 
-  desribe "show" do
+  describe "show" do
     example "ログインフォームにリダイレクト" do
       get url_for(args.merge(action: :show))
       expect(response).to redirect_to(staff_login_url)
