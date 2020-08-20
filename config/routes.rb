@@ -15,7 +15,9 @@ Rails.application.routes.draw do
       root "top#index"
       get "login" => "sessions#new", as: :login
       resource :session, only: [:create, :destroy]
-      resources :staff_members
+      resources :staff_members do
+        resources :staff_events, only: [:index]
+      end
     end
   end
 
@@ -23,5 +25,6 @@ Rails.application.routes.draw do
     namespace :customer, path: config[:customer][:path] do
       root "top#index"
     end
+    resources :staff_events, only: [:index]
   end
 end
