@@ -28,12 +28,6 @@ describe "管理者による職員管理" do
       get admin_staff_members_url
       expect(response).to redirect_to(admin_root_url)
     end
-
-    example "セッションタイムアウト" do
-      travel_to Staff::Base::TIMEOUT.from_now.advance(seconds: 1)
-      get admin_staff_members_url
-      expect(response).to redirect_to(staff_login_url)
-    end
   end
 
   describe "新規登録" do
