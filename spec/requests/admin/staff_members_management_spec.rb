@@ -17,7 +17,7 @@ describe "管理者による職員管理" do
     }
   end
 
-  describe "情報表示" do
+  describe "一覧" do
     example "成功" do
       get admin_staff_members_url
       expect(response.status).to eq(200)
