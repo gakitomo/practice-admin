@@ -5,9 +5,9 @@ class StaffEvent < ApplicationRecord
   alias_attribute :occurred_at, :created_at
 
   DESCRIPTIONS = {
-    logged_in = "ログイン",
-    logged_out = "ログアウト",
-    rejected = "ログイン拒否"
+    logged_in: "ログイン",
+    logged_out: "ログアウト",
+    rejected: "ログイン拒否"
   }
 
   def description
