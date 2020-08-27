@@ -18,6 +18,7 @@ Rails.application.routes.draw do
       resources :staff_members do
         resources :staff_events, only: [:index]
       end
+      resources :staff_events, only: [:index]
     end
   end
 
