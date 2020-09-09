@@ -7,6 +7,9 @@
   .links{
     text-align: right;
     padding: $moderate;
+    a{
+      text-decoration: none;
+    }
   }
   table{
     margin: $moderate auto 0;
