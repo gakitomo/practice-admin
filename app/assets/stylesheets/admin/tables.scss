@@ -32,6 +32,10 @@
     width: 100%;
     tr: nth-child(even){background-color: $very_light_gray;}
     tr: nth-child(odd){background-color: $light_gray;}
+    a{
+      text-decoration: none;
+      color: blue;
+    }
   }
   table.attributes{
     width: 100%;
