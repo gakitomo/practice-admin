@@ -4,7 +4,7 @@ class Staff::ChangePasswordForm
   attr_accessor :object, :current_password, :new_password, :new_password_confirmation
   validates :new_password, presence: true, confirmation: true
 
-  validates do
+  validate do
     unless Staff::Authenticator.new(object).authenticate(current_password)
       errors.add(:current_password, :wrong)
     end
