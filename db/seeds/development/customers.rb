@@ -19,11 +19,11 @@ given_names = %w{
   太一:タイチ:taichi
   浩貴:ヒロキ:hiroki
   遼:リョウ:ryo
-  芽衣:メイ
-  彩花:アヤカ
-  美咲:ミサキ
-  玲奈:レナ
-  絵美:エミ
+  芽衣:メイ:mei
+  彩花:アヤカ:ayaka
+  美咲:ミサキ:misaki
+  玲奈:レナ:rena
+  絵美:エミ:emi
 }
 
 company_names = %w(OIAX ABC XYZ)
@@ -34,7 +34,7 @@ company_names = %w(OIAX ABC XYZ)
     gn = given_names[m].split(":")
 
     c = Customer.create!(
-      email: "#{fn[0]}.#{gn[0]}@example.jp",
+      email: "#{fn[2]}.#{gn[2]}@example.jp",
       family_name: fn[0],
       given_name: gn[0],
       family_name_kana: fn[1],
