@@ -18,9 +18,9 @@ family_names = %w{
 given_names = %w{
   二郎:ジロウ:jiro
   三郎:サブロウ:saburo
-  松子:マツコ:matsuko
-  竹子:タケコ:takeko
-  梅子:ウメコ:umeko
+  和子:カズコ:kazuko
+  由紀子:ユキコ:yukiko
+  恵子:ケイコ:keiko
 }
 
 20.times do |n|
