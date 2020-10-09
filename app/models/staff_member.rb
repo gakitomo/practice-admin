@@ -1,5 +1,6 @@
 class StaffMember < ApplicationRecord
 include StringNormalizer
+include PersonalNameHolder
 
   has_many :events, class_name: "StaffEvent", dependent: :destroy
 
