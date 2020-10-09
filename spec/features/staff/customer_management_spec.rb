@@ -40,15 +40,15 @@ feature "職員による顧客管理" do
     end
     click_button "登録"
 
-    new_customer = Customer.order(:id).login_as_staff_member
+    new_customer = Customer.order(:id).last
     expect(new_customer.email).to eq("test@example.jp")
     expect(new_customer.birthday).to eq(Date.new(1970,1,1))
     expect(new_customer.gender).to eq("female")
     expect(new_customer.home_address.postal_code).to eq("1000001")
-    expect(new_customer.work_address.company_name).to eq("test")
+    expect(new_customer.work_address.company_name).to eq("テスト")
   end
 
-  scenario "職員が顧客、自宅住所、勤務先を追加する" do
+  scenario "職員が顧客、自宅住所、勤務先を更新する" do
     click_link "顧客管理"
     first("table.listing").click_link "編集"
 
