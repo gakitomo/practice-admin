@@ -1,7 +1,7 @@
 class StaffMember < ApplicationRecord
-include EmailHolder
-include PersonalNameHolder
-include PasswordHolder
+  include EmailHolder
+  include PersonalNameHolder
+  include PasswordHolder
 
   has_many :events, class_name: "StaffEvent", dependent: :destroy
 
