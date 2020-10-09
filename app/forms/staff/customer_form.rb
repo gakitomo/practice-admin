@@ -19,10 +19,6 @@ class Staff::CustomerForm
     customer.work_address.assign_attributes(work_address_params)
   end
 
-  def save
-    customer.save
-  end
-
   private
   def customer_params
     @params.require(:customer).permit(
