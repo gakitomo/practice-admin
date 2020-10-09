@@ -1,7 +1,7 @@
 module PersonalNameHolder
   extend ActiveSupport::Concern
 
-  HUMAN_NAME_REGEXP = /\A[\p{han}\p{hiragana}\p{katakana}\u{30fc}A-Za-z]+\z/
+  HUMAN_NAME_REGEXP = /\A[\p{han}\p{hiragana}\p{katakana}\u{30fc}\p{alpha}]+\z/
   KATAKANA_REGEXP = /\A[\p{katakana}\u{30fc}]+\z/
 
   included do
