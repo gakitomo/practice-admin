@@ -6,7 +6,7 @@ class Customer < ApplicationRecord
 
   validates :gender, inclusion: {in: %w(male female), allow_blank: true}
   validates :birthday, date: {
-    after: Date.new(1900,1,1)
+    after: Date.new(1900,1,1),
     before: -> (obj){Date.today},
     allow_blank: true
   }
