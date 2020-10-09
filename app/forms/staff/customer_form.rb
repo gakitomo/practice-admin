@@ -20,6 +20,7 @@ class Staff::CustomerForm
   end
 
   def save
+    if customer.valid?
     ActiveRecord::Base.transaction do
       customer.save!
       customer.home_address.save!
