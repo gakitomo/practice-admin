@@ -28,6 +28,5 @@ Rails.application.routes.draw do
     namespace :customer, path: config[:customer][:path] do
       root "top#index"
     end
-    resources :staff_events, only: [:index]
   end
 end
