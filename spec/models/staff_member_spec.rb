@@ -1,7 +1,6 @@
 require "rails_helper"
 
 RSpec.describe StaffMember, type: :model do
-  # pending "add some examples to (or delete) #{__FILE__}"
   describe "#password=" do
     example "文字列を与えると、hashed_passwordは長さ60の文字列になる" do
       member = StaffMember.new
