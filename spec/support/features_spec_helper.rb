@@ -1,7 +1,7 @@
 module FeaturesSpecHelper
   def switch_namespace(namespace)
     config = Rails.application.config.baukis2
-    Capybara.app_host = "http:://" + config[namespace][:host]
+    Capybara.app_host = "http://" + config[namespace][:host]
   end
 
   def login_as_staff_member(staff_member, password = "pw")
