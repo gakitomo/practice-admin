@@ -14,7 +14,7 @@ feature "職員による顧客管理" do
     click_link "顧客管理"
     first("div.links").click_link "新規登録"
     fill_in "メールアドレス", with: "test@example.jp"
-    fill_in " パスワード", with: "pw"
+    fill_in "パスワード", with: "pw"
     fill_in "form_customer_family_name", with: "試験"
     fill_in "form_customer_given_name", with: "花子"
     fill_in "form_customer_family_name_kana", with: "シケン"
@@ -49,9 +49,9 @@ feature "職員による顧客管理" do
       select "東京都", from: "都道府県"
       fill_in "市区町村", with: "世田谷区"
       fill_in "町域・番地など", with: "世田谷１−１−１"
-      fill_in "建物名、部屋番号など", with: ""
+      fill_in "建物名・部屋番号など", with: ""
     end
-    check "勤務地を入力する"
+    check "勤務先を入力する"
     within("fieldset#work-address-fields") do
       fill_in "会社名", with: "テスト"
       fill_in "部署名", with: ""
@@ -59,7 +59,7 @@ feature "職員による顧客管理" do
       select "", from: "都道府県"
       fill_in "市区町村", with: ""
       fill_in "町域・番地など", with: ""
-      fill_in "建物名、部屋番号など", with: ""
+      fill_in "建物名・部屋番号など", with: ""
     end
     click_button "登録"
 
