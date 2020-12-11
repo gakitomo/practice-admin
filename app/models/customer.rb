@@ -3,6 +3,7 @@ class Customer < ApplicationRecord
   include PersonalNameHolder
   include PasswordHolder
   
+  has_many :addresses
   has_one :home_address, dependent: :destroy, autosave: true
   has_one :work_address, dependent: :destroy, autosave: true
   has_many :phones, dependent: :destroy
