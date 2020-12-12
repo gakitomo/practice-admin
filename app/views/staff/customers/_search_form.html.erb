@@ -12,7 +12,7 @@
     m.br
     m.div do
       m << p.drop_down_list_block(:address_type, "住所の検索範囲：",
-        [["自宅住所のみ", "home"],["勤務先のみ","work"]])
+        [["自宅住所のみ","home"],["勤務先のみ","work"]])
     end
     m << p.drop_down_list_block(:prefecture, "都道府県：", Address::PREFECTURE_NAMES)
     m << p.text_field_block(:city, "市区町村：")
