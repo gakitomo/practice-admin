@@ -21,6 +21,7 @@ class Staff::CustomerSearchForm
     rel = rel.where(birth_year: birth_year) if birth_year.present?
     rel = rel.where(birth_month: birth_month) if birth_month.present?
     rel = rel.where(birth_mday: birth_mday) if birth_mday.present?
+    rel = rel.where(gender: gender) if gender.present?
 
     if prefecture.present? || city.present?
       case address_type
