@@ -20,7 +20,7 @@ class Customer < ApplicationRecord
     if birthday
       self.birth_year = birthday.year
       self.birth_month = birthday.month
-      self.birth_day = birthday.mday
+      self.birth_mday = birthday.mday
     end
   end
 end
