@@ -6,7 +6,7 @@
     m << p.text_field_block(:given_name_kana, "フリガナ（名）：")
     m.br
     m << p.drop_down_list_block(
-      :birth_year, "誕生年", (1900..Time.current_year).to_a.reverse)
+      :birth_year, "誕生年", (1900..Time.current.year).to_a.reverse)
     m << p.drop_down_list_block(:birth_month, "誕生月", 1..12)
     m << p.drop_down_list_block(:birth_mday, "誕生日", 1..31)
     m.br

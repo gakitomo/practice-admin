@@ -42,7 +42,7 @@ class Staff::CustomerSearchForm
       rel = rel.joins(:phones).where("phones.number_for_index" => phone_number)
     end
 
-    rel = rel.district
+    rel = rel.distinct
 
     rel.order(:family_name_kana, :given_name_kana)
   end
