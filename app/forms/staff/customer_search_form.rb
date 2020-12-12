@@ -4,7 +4,7 @@ class Staff::CustomerSearchForm
 
   attr_accessor :family_name_kana, :given_name_kana,
     :birth_year, :birth_month, :birth_mday,
-    :address_type, :prefecture, :city, :phone_number
+    :address_type, :prefecture, :city, :phone_number, :gender
 
   def search
     normalize_values
