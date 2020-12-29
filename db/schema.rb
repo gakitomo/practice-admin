@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_26_135425) do
+ActiveRecord::Schema.define(version: 2020_12_29_143424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(version: 2020_12_26_135425) do
     t.boolean "primary", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index "\"right\"((number_for_index)::text, 4)", name: "index_phones_on_RIGHT_number_for_index_4"
     t.index ["address_id"], name: "index_phones_on_address_id"
     t.index ["customer_id"], name: "index_phones_on_customer_id"
     t.index ["number_for_index"], name: "index_phones_on_number_for_index"
