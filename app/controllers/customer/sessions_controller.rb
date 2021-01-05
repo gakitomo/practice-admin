@@ -35,6 +35,7 @@ class Customer::SessionsController < Customer::Base
   end
 
   def destroy
+    cookies.delete(:customer_id)
     session.delete(:customer_id)
     flash.notice = "ログアウトしました"
     redirect_to :customer_root
